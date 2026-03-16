@@ -17,6 +17,11 @@ jobs:
         with:
           node-version: 20
 
+      - name: Create .env.dev
+        run: |
+          echo "BASE_URL=https://jsonplaceholder.typicode.com" >> .env.dev
+          echo "AUTH_MODE=none" >> .env.dev
+
       - name: Install dependencies
         run: npm ci
 

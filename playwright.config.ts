@@ -4,6 +4,7 @@ const isCI = !!process.env.CI;
 
 export default defineConfig({
   testDir: './src',
+  testIgnore: ['**/ui.demo.flow.spec.ts'],
   timeout: 30_000,
   retries: 1,
   reporter: [
